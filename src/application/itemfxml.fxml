@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="803.0" style="-fx-background-color: #2788ac;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ItemController">
+   <children>
+      <Label layoutX="14.0" layoutY="22.0" prefHeight="22.0" prefWidth="243.0" text="You can create new item here !!">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="291.0" layoutY="33.0" prefHeight="20.0" prefWidth="154.0" text="Search the item here ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchTextField" layoutX="445.0" layoutY="30.0" onAction="#searchTable" prefHeight="26.0" prefWidth="211.0" promptText="keywords" />
+      <Button fx:id="exit" layoutX="758.0" layoutY="7.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="26.0" prefWidth="39.0" style="-fx-background-color: pink;" text="EXIT" textFill="#333131">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <VBox layoutX="30.0" layoutY="46.0" prefHeight="438.0" prefWidth="243.0">
+         <children>
+            <Label prefHeight="41.0" prefWidth="232.0" text="Store Number :" textFill="#f4f0f0" />
+            <TextField fx:id="snumberTextField" />
+            <Label prefHeight="41.0" prefWidth="232.0" text="Item Name :" textFill="#f4f0f0" />
+            <TextField fx:id="inameTextField" />
+            <Label prefHeight="41.0" prefWidth="232.0" text="Item Number:" textFill="#f4f0f0" />
+            <TextField fx:id="inumberTextField" />
+            <Label prefHeight="41.0" prefWidth="232.0" text="Item Details:" textFill="#f4f0f0" />
+            <TextField fx:id="idetailsTextField" />
+            <Label prefHeight="18.0" prefWidth="77.0" text="Quantity" textFill="#f4f2f2" />
+            <Label prefHeight="18.0" prefWidth="58.0" text="Price" textFill="#f7f3f3">
+               <VBox.margin>
+                  <Insets left="170.0" top="-10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="ipriceTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="50.0">
+               <VBox.margin>
+                  <Insets left="170.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="iquantityTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="50.0">
+               <VBox.margin>
+                  <Insets top="-40.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="ADD" mnemonicParsing="false" onAction="#ADDonAction" prefHeight="50.0" prefWidth="128.0" styleClass="Button1" stylesheets="@style1.css" text="ADD">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="40.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="CLEAR" mnemonicParsing="false" onAction="#CLEAROnAction" prefHeight="50.0" prefWidth="128.0" styleClass="Button1" stylesheets="@style1.css" text="CLEAR">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="150.0" top="-50.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="Display" mnemonicParsing="false" onAction="#DisplayOnAction" prefHeight="49.0" prefWidth="243.0" styleClass="Button2" stylesheets="@style1.css" text="Display ">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <TableView fx:id="ItemView" layoutX="291.0" layoutY="96.0" prefHeight="379.0" prefWidth="507.0">
+         <columns>
+            <TableColumn fx:id="itemName" prefWidth="141.5999755859375" text="ITEM NAME" />
+            <TableColumn fx:id="itemNumber" prefWidth="118.4000244140625" text="ITEM NUMBER" />
+            <TableColumn fx:id="itemDetails" prefWidth="127.199951171875" text="ITEM DETAILS" />
+            <TableColumn fx:id="storeNumber" prefWidth="116.800048828125" text="STORE NUMBER" />
+         </columns>
+      </TableView>
+      <Button fx:id="clearSearch" layoutX="667.0" layoutY="30.0" mnemonicParsing="false" onAction="#ClearSearchOnAction" prefHeight="26.0" prefWidth="82.0" text="Clear Search" />
+   </children>
+</AnchorPane>

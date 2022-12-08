@@ -1,0 +1,18 @@
+.tab-pane{
+	-fx-background-color :gray;
+	-fx-background-radius:30 0 0 30;
+	
+}
+
+.tab-pane > .tab-header-area > .tab-header-background {
+    -fx-background-color: -fx-outer-border, -fx-text-box-border, 
+        linear-gradient(from 0px 0px to 0px 55px, -fx-text-box-border, my-tab-header-background) ;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab {
+    -fx-background-radius: 100 0 0 50;
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-radius: 30 0 0 30;
+}

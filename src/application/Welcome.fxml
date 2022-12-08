@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="819.0" styleClass="backgroundColor" stylesheets="@Style3.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WelcomeController">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="storeButton" mnemonicParsing="false" onAction="#storeButtonOnAction" prefHeight="99.0" prefWidth="199.0" styleClass="Button" stylesheets="@style1.css" text="STORE" textFill="#f4f0f0">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="itemButton" mnemonicParsing="false" onAction="#itemButtonOnAction" prefHeight="99.0" prefWidth="199.0" styleClass="Button" stylesheets="@style1.css" text="ITEM" textFill="#fcfafa">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="purchaseButton" mnemonicParsing="false" onAction="#purchaseButtonOnAction" prefHeight="99.0" prefWidth="199.0" styleClass="Button" stylesheets="@style1.css" text="PURCHASE" textFill="#ece4e4">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="analyButton" mnemonicParsing="false" onAction="#analyButtonOnAction" prefHeight="99.0" prefWidth="199.0" styleClass="Button" stylesheets="@style1.css" text="DASHBOARD" textFill="#f4f2f2">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="542.0" prefWidth="879.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="msg" layoutX="42.0" layoutY="26.0" prefHeight="68.0" prefWidth="726.0" text="Label">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.13950000703334808" green="0.15000000596046448" blue="0.14219695329666138" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.17754386365413666" green="0.24210526049137115" blue="0.19906432926654816" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="msg1" layoutX="7.0" layoutY="83.0" prefHeight="175.0" prefWidth="778.0" text="Label" textFill="#711717">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="exitButton" layoutX="724.0" layoutY="13.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: pink;" text="EXIT" textFill="#403c3c" />
+            <ImageView fitHeight="212.0" fitWidth="819.0" layoutX="-5.0" layoutY="320.0">
+               <image>
+                  <Image url="@../../../../../Downloads/background_image.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </center>
+</BorderPane>
